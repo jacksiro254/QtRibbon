@@ -1,19 +1,19 @@
-# QRibbon
-Qt 实现的 Ribbon 风格菜单栏，基本思路是定制QTabWidget，通过QSS（样式表）实现显示样式的调整，QRibbon的原则是尽量不侵入正常业务逻辑的开发，所以在开发基于QMainWindow的程序时，可以按照正常的开发流程创建界面，创建普通的菜单栏以及菜单项及其信号槽关联，最后调用QRibbon::install(&amp;mainWindow)函数即可自动创建出与QMainWindow原有QMenuBar相对应的Ribbon...
+# QtRibbon
+The Ribbon style menu bar implemented by Qt, the basic idea is to customize QTabWidget and adjust the display style through QSS (style sheet). The principle of QRibbon is to try not to invade the development of normal business logic, so when developing programs based on QMainWindow, you can follow The normal development process creates an interface, creates a common menu bar and menu items and their signal slot associations, and finally calls the QRibbon::install(&amp;mainWindow) function to automatically create a Ribbon corresponding to the original QMenuBar of QMainWindow...
 
-## 使用方法
-* 正常创建QMainWindow
-* 为QMainWindow添加菜单和菜单项（建议为所有菜单项都添加合适的图标，这样最终QRibbon就可以直接使用菜单项的图标作为按钮图标）
-* 将QRibbon库相关的所有文件添加至工程
-* 构造完成主界面后，调用如下代码即可实现QRibbon的添加:  
+## Instructions
+* Create QMainWindow normally
+* Add menus and menu items to QMainWindow (it is recommended to add appropriate icons for all menu items, so that finally QRibbon can directly use the icon of the menu item as the button icon)
+* Add all files related to the QRibbon library to the project
+* After the main interface is constructed, the QRibbon can be added by calling the following code:  
 
     ```QRibbon::install(&mainWindow);```
 
-## 使用QRibbon::install(window)前后效果对比
+## Use QtRibbon::install(window) before and after effect comparison
 ![image](https://github.com/gnibuoz/QRibbon/blob/master/images/QRibbon.gif)
 
-## 使用QRibbon前界面效果
+## Use QtRibbon front interface effect
 ![image](https://github.com/gnibuoz/QRibbon/blob/master/images/%E4%BD%BF%E7%94%A8QRibbon%E5%89%8D.png)
 
-## 使用QRibbon后界面效果
+## Interface effect after using QtRibbon
 ![image](https://github.com/gnibuoz/QRibbon/blob/master/images/Qt-Ribbon.gif)
